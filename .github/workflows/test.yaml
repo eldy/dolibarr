@@ -7,19 +7,20 @@ on:
 
 permissions: write-all
 
+env:
+  ENVGHT: ${{ secrets.GH_TOKEN }}
+  ENVGHU: ${{ github.token }}
+  VARAAA: ${{ vars.AAA }}
+  ENVAAA: ${{ env.AAA }}
+  SECBBB: ${{ secrets.BBB }}
+  VARREPORGCCC: ${{ vars.CCC }}
+
 jobs:
   testjob:
     permissions:
       issues: write
       pull-requests: write
     runs-on: ubuntu-latest
-    env:
-      ENVGHT: ${{ secrets.GH_TOKEN }}
-      ENVGHU: ${{ github.token }}
-      VARAAA: ${{ vars.AAA }}
-      ENVAAA: ${{ env.AAA }}
-      SECBBB: ${{ secrets.BBB }}
-      VARREPORGCCC: ${{ vars.CCC }}
     steps:
       - name: Log
         run: |
