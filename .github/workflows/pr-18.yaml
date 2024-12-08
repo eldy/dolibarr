@@ -12,9 +12,9 @@ jobs:
   pr18:
     runs-on: ubuntu-latest
 
-    env:
-      GH_TOKEN: ${{ github.token }}
-      GH_TOKENS: ${{ secrets.GITHUB_TOKEN }}
+    #env:
+    #  GH_TOKEN: ${{ github.token }}
+    #  GH_TOKENS: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
     - name: Checkout repository
@@ -31,15 +31,14 @@ jobs:
         REVIEWER: "rycks" # Remplacez par le nom d'utilisateur GitHub du reviewer
       run: |
         echo "Run action by ${{ github.actor }}"        
-        echo "GH_TOKEN=$GH_TOKEN"
-        echo "GH_TOKENS=$GH_TOKENS"
+        echo "github.token=${{ github.token }}"
+        echo "secrets.GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}"
+        echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
         echo Get the pr_number
         pr_number=$(jq --raw-output .number < $GITHUB_EVENT_PATH)
-        echo authenticatenv
-        gh auth login --with-token <<< "$GH_TOKEN"
         echo "pr_numer=$pr_number"
         echo Authenticate login gh
-        gh auth login --with-token <<< "$GH_TOKEN"
+        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
         echo Set the PR
         gh pr edit $pr_number --add-reviewer "$REVIEWER"
       continue-on-error: true
