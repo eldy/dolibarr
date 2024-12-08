@@ -13,6 +13,7 @@ env:
   VARAAA: ${{ vars.AAA }}
   SECBBB: ${{ secrets.BBB }}
   VARREPORGCCC: ${{ vars.CCC }}
+  ENVFIX: "abc"
 
 jobs:
   testjob:
@@ -30,27 +31,8 @@ jobs:
           echo "secret org: ${{secrets.BBB}}"
           echo "variable repository of orga: ${{vars.CCC}}"
           echo "ENVGHT: ${{env.ENVGHT}}"
-          echo "ENVGHU: ${{ENVGHU}}"
-          echo "ENVGHU: $ENVGHU"
-          echo "VARAAA: ${{VARAAA}}"
-          echo "VARAAA: $VARAAA"
-          echo "ENVAAA: ${{VARAAA}}"
-          echo "ENVAAA: $VARAAA"
-          echo "VARREPORGCCC: ${{VARREPORGCCC}}"
-          echo "VARREPORGCCC: $VARREPORGCCC"
-          echo "ENVGHTWITH: ${{ENVGHTWITH}}"
-          echo "ENVGHT: $ENVGHTWITH"
-          echo "ENVGHUWITH: ${{ENVGHUWITH}}"
-          echo "ENVGHU: $ENVGHUWITH"
-          echo "VARAAAWITH: ${{VARAAAWITH}}"
-          echo "VARAAAWITH: $VARAAAWITH"
-          echo "SECBBBWITH: ${{SECBBBWITH}}"
-          echo "SECBBBWITH: $SECBBBWITH"
-#        with:
-#          ENVGHW: $GH_TOKEN			
-#          ENVGHTWITH: $ENVGHT			
-#          ENVGHUWITH: $ENVGHU			
-#          VARAAAWITH: $VARAAA			
-#          SECBBBWITH: $SECBBB			
-#          VARREPORGCCCWITH: $VARREPORGCCC
-
+          echo "ENVGHU: ${{env.ENVGHU}}"
+          echo "VARAAA: ${{env.VARAAA}}"
+          echo "ENVAAA: ${{env.VARAAA}}"
+          echo "VARREPORGCCC: ${{env.VARREPORGCCC}}"
+          echo "ENVFIX: ${{env.abc}}"
