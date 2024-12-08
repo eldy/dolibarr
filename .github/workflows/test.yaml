@@ -1,11 +1,10 @@
+name: Test github actions
 on:
   workflow_dispatch:
   pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - "18.0"
-
-permissions: write-all
 
 env:
   ENVGHT: ${{ secrets.GH_TOKEN }}
