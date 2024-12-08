@@ -9,12 +9,48 @@ permissions: write-all
 
 jobs:
   testjob:
+    permissions:
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
+    env:
+      ENVGHT: ${{ secrets.GH_TOKEN }}
+      ENVGHU: ${{ github.token }}
+      VARAAA: ${{ vars.AAA }}
+      ENVAAA: ${{ env.AAA }}
+      SECBBB: ${{ secrets.BBB }}
+      VARREPORGCCC: ${{ vars.CCC }}
     steps:
       - name: Log
         run: |
-          echo "repo-token: ${{ secrets.GITHUB_TOKEN }}"
+          echo "repo-token: ${{secrets.GITHUB_TOKEN}}"
           echo "variable org: ${{vars.AAA}}"
           echo "env prg: ${{env.AAA}}"
           echo "secret org: ${{secrets.BBB}}"
           echo "variable repository of orga: ${{vars.CCC}}"
+          echo "ENVGHT: ${{ENVGHT}}"
+          echo "ENVGHT: $ENVGHT"
+          echo "ENVGHU: ${{ENVGHU}}"
+          echo "ENVGHU: $ENVGHU"
+          echo "VARAAA: ${{VARAAA}}"
+          echo "VARAAA: $VARAAA"
+          echo "ENVAAA: ${{VARAAA}}"
+          echo "ENVAAA: $VARAAA"
+          echo "VARREPORGCCC: ${{VARREPORGCCC}}"
+          echo "VARREPORGCCC: $VARREPORGCCC"
+          echo "ENVGHTWITH: ${{ENVGHTWITH}}"
+          echo "ENVGHT: $ENVGHTWITH"
+          echo "ENVGHUWITH: ${{ENVGHUWITH}}"
+          echo "ENVGHU: $ENVGHUWITH"
+          echo "VARAAAWITH: ${{VARAAAWITH}}"
+          echo "VARAAAWITH: $VARAAAWITH"
+          echo "SECBBBWITH: ${{SECBBBWITH}}"
+          echo "SECBBBWITH: $SECBBBWITH"
+        with:
+          ENVGHW: $GH_TOKEN			
+          ENVGHTWITH: $ENVGHT			
+          ENVGHUWITH: $ENVGHU			
+          VARAAAWITH: $VARAAA			
+          SECBBBWITH: $SECBBB			
+          VARREPORGCCCWITH: $VARREPORGCCC
+

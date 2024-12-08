@@ -10,12 +10,15 @@ on:
 #permissions: write-all
 
 jobs:
-  run:
+  pr18:
+    permissions:
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
 
     env:
-    #  GH_TOKEN: ${{ secrets.GH_TOKEN }}
       GH_TOKEN: ${{ github.token }}
+	  GH_TOKENS: ${{ secrets.GH_TOKEN }}
 
     steps:
     - name: Checkout repository
@@ -37,6 +40,7 @@ jobs:
         REVIEWER: "rycks" # Remplacez par le nom d'utilisateur GitHub du reviewer
       run: |
         echo "GH_TOKEN=$GH_TOKEN"
+		echo "GH_TOKENS=$GH_TOKENS"
         pr_number=$(jq --raw-output .number < $GITHUB_EVENT_PATH)
         gh pr edit $pr_number --add-reviewer "$REVIEWER"
       continue-on-error: true
