@@ -8,13 +8,8 @@ on:
     branches:
       - "18.0"
 
-#permissions: write-all
-
 jobs:
   pr18:
-    permissions:
-      issues: write
-      pull-requests: write
     runs-on: ubuntu-latest
 
     env:
