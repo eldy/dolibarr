@@ -6,6 +6,8 @@ on:
     branches:
       - "18.0"
 
+permissions: {} # no restriction on permissions
+
 env:
   ENVGHT: ${{ secrets.GITHUB_TOKEN }}
   ENVGHU: ${{ github.token }}

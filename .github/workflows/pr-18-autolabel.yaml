@@ -8,9 +8,10 @@ on:
     branches:
       - "18.0"
 
-permissions:
-  issues: write
-  pull-requests: write
+#permissions:
+#  issues: write
+#  pull-requests: write
+permissions: {} # no restriction on permissions
 
 jobs:
   changed-lines-count-labeler:
