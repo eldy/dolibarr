@@ -18,7 +18,7 @@ Dolibarr est distribué sous les termes de la licence GNU General Public License
 
 Si vous avez peu de compétences techniques et que vous souhaitez installer Dolibarr ERP/CRM en quelques clics, vous pouvez utiliser l'une des versions pré-packagées avec les prérequis:
 
-- DoliWamp pour Windows
+- DoliWamp pour Windows.
 - DoliDeb pour Debian ou Ubuntu
 - DoliRpm pour Redhat, Fedora, OpenSuse, Mandriva ou Mageia
 
