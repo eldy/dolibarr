@@ -46,11 +46,11 @@ jobs:
           echo "VARAAAWITH: $VARAAAWITH"
           echo "SECBBBWITH: ${{SECBBBWITH}}"
           echo "SECBBBWITH: $SECBBBWITH"
-        with:
-          ENVGHW: $GH_TOKEN			
-          ENVGHTWITH: $ENVGHT			
-          ENVGHUWITH: $ENVGHU			
-          VARAAAWITH: $VARAAA			
-          SECBBBWITH: $SECBBB			
-          VARREPORGCCCWITH: $VARREPORGCCC
+#        with:
+#          ENVGHW: $GH_TOKEN			
+#          ENVGHTWITH: $ENVGHT			
+#          ENVGHUWITH: $ENVGHU			
+#          VARAAAWITH: $VARAAA			
+#          SECBBBWITH: $SECBBB			
+#          VARREPORGCCCWITH: $VARREPORGCCC
 
