@@ -7,7 +7,7 @@ on:
       - "18.0"
 
 env:
-  ENVGHT: ${{ secrets.GH_TOKEN }}
+  ENVGHT: ${{ secrets.GITHUB_TOKEN }}
   ENVGHU: ${{ github.token }}
   VARAAA: ${{ vars.AAA }}
   SECBBB: ${{ secrets.BBB }}
