@@ -20,7 +20,7 @@ Si vous avez peu de compétences techniques et que vous souhaitez installer Doli
 
 - DoliWamp pour Windows.
 - DoliDeb pour Debian ou Ubuntu.
-- DoliRpm pour Redhat, Fedora, OpenSuse, Mandriva ou Mageia
+- DoliRpm pour Redhat, Fedora, OpenSuse, Mandriva ou Mageia.
 
 Les packages peuvent être téléchargés à partir de [site web officiel](https://www.dolibarr.org/).
 
