@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Log
         run: |
+          echo "Run action by ${{ github.actor }}"        
+          echo "github.token=${{ github.token }}"
+          echo "secrets.GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}"
+          echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
           echo "repo-token: ${{secrets.GITHUB_TOKEN}}"
           echo "variable org: ${{vars.AAA}}"
           echo "env prg: ${{env.AAA}}"
@@ -28,7 +32,7 @@ jobs:
           echo "variable repository of orga: ${{vars.CCC}}"
           echo "ENVGHT: ${{env.ENVGHT}}"
           echo "ENVGHU: ${{env.ENVGHU}}"
-          echo "VARAAA: ${{env.VARAAA}}"
+          echo "VARAAA: ${{vars.AAA}}"
           echo "ENVAAA: ${{env.VARAAA}}"
           echo "VARREPORGCCC: ${{env.VARREPORGCCC}}"
-          echo "ENVFIX: ${{env.abc}}"
+          echo "ENVFIX: ${{env.ENVFIX}}"
