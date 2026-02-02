@@ -273,13 +273,13 @@ class PaymentVarious extends CommonObject
 			return -1;
 		}
 
-		if (!$error) {
-			// Update extrafields
-			$result = $this->insertExtraFields();
-			if ($result < 0) {
-				$error++;
-			}
+		//if (!$error) {
+		// Update extrafields
+		$result = $this->insertExtraFields();
+		if ($result < 0) {
+			$error++;
 		}
+		//}
 
 		if (!$notrigger) {
 			// Call trigger
